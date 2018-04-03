@@ -1,0 +1,272 @@
+@font-face{
+   font-family:"warcraft";
+   src:url("../font/LifeCraft_Font.ttf");
+}
+.body,.prologue{
+  width:100%;
+  height:100vh;
+  position:relative;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+.cover{
+  width:100%;
+  height:100vh;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+video{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-10;
+}
+.invisible{
+  background:black;
+  transition:background ease 2s;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  video {
+    width: auto;
+    height: 100%;
+  }
+}
+.menu{
+  display:flex;
+  flex-direction:column;
+  margin:0 auto;
+  width:70%;
+  align-items:flex-end;
+}
+.menu.invisible{
+  opacity:0;
+  transition:all ease 2s;
+}
+.menu-title{
+
+font-size:72px;
+color:#ffd935;
+padding:120px 0;
+font-family:"warcraft";
+width:500px;
+text-align:center;
+
+}
+.menu-btn{
+width:500px;
+text-align:center;
+text-align:center;
+font-size:32px;
+  background:none;
+  border:none;
+  color:white;
+  font-family:"warcraft";
+  position:relative;
+}
+.menu-btn::after{
+  content:"♥";
+  opacity:0;
+  right:100px;
+  position:absolute;
+  top:-4px;
+  color:#ffd935;
+}
+.menu-btn::before{
+  content:"♥";
+  opacity:0;
+  left:100px;
+  position:absolute;
+  top:-4px;
+  color:#ffd935;
+}
+.menu-btn:hover::after,.menu-btn:hover::before{
+  opacity:1
+}
+/* css input range */
+.volume-container{
+  display:flex;
+  position:absolute;
+  z-index:auto;
+  top:16px;
+  left:16px;
+  align-items:center;
+}
+.volume-container.invisible{
+  opacity:0;
+  transition:all ease 2s;
+}
+.volume-text{
+  color:white;
+  font-size:16px;
+  margin-right:16px;
+  margin-bottom:4px;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100px;
+  margin: 7.15px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.7px;
+  cursor: pointer;
+  box-shadow: 0px 0px 1.2px rgba(230, 232, 232, 0), 0px 0px 0px rgba(243, 244, 244, 0);
+  background: rgba(247, 255, 0, 0.28);
+  border-radius: 25px;
+  border: 0px solid #fffff8;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
+  border: 0px solid rgba(255, 0, 0, 0);
+  height: 23px;
+  width: 23px;
+  border-radius: 50px;
+  background: #ffc726;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7.15px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgba(247, 255, 0, 0.28);
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.7px;
+  cursor: pointer;
+  box-shadow: 0px 0px 1.2px rgba(230, 232, 232, 0), 0px 0px 0px rgba(243, 244, 244, 0);
+  background: rgba(247, 255, 0, 0.28);
+  border-radius: 25px;
+  border: 0px solid #fffff8;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
+  border: 0px solid rgba(255, 0, 0, 0);
+  height: 23px;
+  width: 23px;
+  border-radius: 50px;
+  background: #ffc726;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.7px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: rgba(247, 255, 0, 0.28);
+  border: 0px solid #fffff8;
+  border-radius: 50px;
+  box-shadow: 0px 0px 1.2px rgba(230, 232, 232, 0), 0px 0px 0px rgba(243, 244, 244, 0);
+}
+input[type=range]::-ms-fill-upper {
+  background: rgba(247, 255, 0, 0.28);
+  border: 0px solid #fffff8;
+  border-radius: 50px;
+  box-shadow: 0px 0px 1.2px rgba(230, 232, 232, 0), 0px 0px 0px rgba(243, 244, 244, 0);
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0), 0px 0px 0px rgba(255, 255, 255, 0);
+  border: 0px solid rgba(255, 0, 0, 0);
+  height: 23px;
+  width: 23px;
+  border-radius: 50px;
+  background: #ffc726;
+  cursor: pointer;
+  height: 8.7px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: rgba(247, 255, 0, 0.28);
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: rgba(247, 255, 0, 0.28);
+}
+/* end css input range*/
+
+/* Prologue */
+.prologue{
+  display:none;
+  background:black;
+  animation:opening ease 2s forwards;
+  align-items:center;
+  flex-direction:column;
+  justify-content: center;
+
+}
+@keyframes opening {
+  0%{background:black;}
+  80%{background:black;}
+ 100%{background:url(../img/prologue.png) center no-repeat fixed;  background-size:cover}
+}
+.prologue-btn{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c40303+0,3f0000+100 */
+background: gray; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, gray 0%, black 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, gray 0%,black 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, gray 0%,black 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='gray', endColorstr='black',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+width:340px;
+padding:4px 0;
+color:#cccccc;
+font-weight:bolder;
+font-family:"warcraft";
+margin-top:24px;
+font-size:24px;
+animation:opening2 ease 1s forwards;
+animation-delay:2s;
+opacity:0;
+}
+.prologue-btn.isactive{
+color:#ffd935;
+background: #c40303;
+background: -moz-radial-gradient(center, ellipse cover, #c40303 0%, #3f0000 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, #c40303 0%,#3f0000 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, #c40303 0%,#3f0000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c40303', endColorstr='#3f0000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.prologue-name{
+  font-size:48px;
+  padding:48px 0;
+  color:white;
+  font-weight:bolder;
+  font-family:"warcraft";
+  animation:opening2 ease 1s forwards;
+  animation-delay:2s;
+  opacity:0;
+}
+.prologue-input{
+width: 340PX;
+font-size: 36px;
+padding: 8px;
+border-radius: 10px;
+border: none;
+background: #fcccff;
+animation:opening2 ease 1s forwards;
+animation-delay:2s;
+opacity:0;
+}
+@keyframes opening2 {
+0%{opacity:0;}
+100%{opacity:1;}
+}
+.prologue-text{
+  display:none;
+}

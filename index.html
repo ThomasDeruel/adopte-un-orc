@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Adopte Un Orc</title>
+</head>
+<body>
+<div class="cover">
+  <div class="body">
+    <div class="menu">
+      <h1 class="menu-title item">Adopte un Orc</h1>
+      <button class="menu-btn">Commencer l'aventure</button>
+    </div>
+    <video class="video-menu item"reload="auto" autoplay="true" loop="false">
+      <source src="video/test.mp4" type="video/mp4"></source>
+    </video>
+    <audio class="song" src="video/songmenu-lions-pride.mp3" autoplay="true" loop="loop"></audio>
+
+    <div class="volume-container">
+      <p class="volume-text">Volume: </p>
+      <input class="volume" type="range" min="0" max="100">
+    </div>
+  </div>
+
+  <div class="prologue">
+    <h1 class="prologue-name">Choisi ton Nom</h1>
+
+    <input class="prologue-input"class="name"type="text" placeholder="Thrall">
+    <button class="prologue-btn">Valider</button>
+    <p class="prologue-text">Salutation <span data-user="name"></span>. Après
+       avoir passé une longue journée difficile à fracasser des gnomes lépreux qui
+       tentaient tant bien que mal d'envahir ogrimmar, vous rentrez chez vous seul, où seul la solitude vous attendra. Vous commencez à vous sentir triste
+     d'imaginer de continuer vos journées longues et ennuyantes </p>
+  </div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
